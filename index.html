@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="panel">
+  <div class="panel-left">
+    <h2>Paste your text</h2>
+    <textarea id="inputText" placeholder="Paste article, essay, or notes here..."></textarea>
+
+    <div class="controls">
+      <label>Min length <input id="minLen" type="number" value="30" min="10"/></label>
+      <label>Max length <input id="maxLen" type="number" value="130" min="20"/></label>
+      <button id="summarizeBtn" class="btn-primary">Summarize</button>
+    </div>
+  </div>
+
+  <div class="panel-right">
+    <h2>Summary</h2>
+    <div id="summaryBox" class="summary-box">Your summary will appear here.</div>
+    <div class="summary-actions">
+      <button id="copyBtn">Copy</button>
+      <button id="downloadBtn">Download</button>
+    </div>
+  </div>
+</section>
+{% endblock %}
